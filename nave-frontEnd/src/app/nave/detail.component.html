@@ -1,0 +1,99 @@
+<app-menu></app-menu>
+
+<div class="container" *ngIf="creacionLanzadera">
+    <div class="container" *ngIf = "lanzadera">
+        <div class="container" *ngIf = "nave">
+            <div class="row mt-5">
+                <div class="col-md-4 mx-auto">
+                    <div class="card">
+                        <div class="card-header text-center">
+                            DETALLE
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-group-flush"></ul>
+                                <li class="list-group-item"><b>Nombre: </b>{{nave.nombre}}</li>
+                                <li class="list-group-item"><b>País: </b>{{nave.pais}}</li>
+                                <li class="list-group-item"><b>Tipo Nave: </b>{{nave.tipoNave}}</li>
+                                <li class="list-group-item"><b> </b>----------------------------------------------</li>
+                                <li class="list-group-item"><b>Potencia: </b>{{lanzadera.potencia}}</li>
+                                <li class="list-group-item"><b>Toneladas Empuje: </b>{{lanzadera.toneladasEmpuje}}</li>
+                                <li class="list-group-item"><b>Toneladas Peso: </b>{{lanzadera.toneladasPeso}}</li>   
+                                <li class="list-group-item"><b>Altura: </b>{{lanzadera.altura}}</li>
+                                <li class="list-group-item"><b>Capacidad de Toneladas: </b>{{lanzadera.capacidadToneladas}}</li>
+                        </div>
+                        <div class="card-footer">
+                            <button class="button.btn.btn-outline-primary w-100" routerLink="/">
+                                <i class="fas fa-arrow-alt-circle-left"></i> Atras
+                            </button>
+                        </div>
+                    </div>
+                </div>            
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="container" *ngIf="creacionTripulada">
+    <div class="container" *ngIf = "tripulada">
+        <div class="container" *ngIf = "nave">
+            <div class="row mt-5">
+                <div class="col-md-4 mx-auto">
+                    <div class="card">
+                        <div class="card-header text-center">
+                            DETALLE
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-group-flush"></ul>
+                                <li class="list-group-item"><b>Nombre: </b>{{nave.nombre}}</li>
+                                <li class="list-group-item"><b>País: </b>{{nave.pais}}</li>
+                                <li class="list-group-item"><b>Tipo Nave: </b>{{nave.tipoNave}}</li>
+                                <li class="list-group-item"><b> </b>----------------------------------------------</li>
+                                <li class="list-group-item"><b>Toneladas de Peso: </b>{{tripulada.toneladasPeso}}</li>
+                                <li class="list-group-item"><b>Distancia: </b>{{tripulada.distancia}}</li>
+                                <li class="list-group-item"><b>Capacidad de Personas: </b>{{tripulada.capacidadPersonas}}</li>                                                                
+                        </div>
+                        <div class="card-footer">
+                            <button class="button.btn.btn-outline-primary w-100" routerLink="/">
+                                <i class="fas fa-arrow-alt-circle-left"></i> Atras
+                            </button>
+                        </div>
+                    </div>
+                </div>            
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container" *ngIf="creacionNoTripulada">
+    <div class="container" *ngIf = "noTripulada">
+        <div class="container" *ngIf = "nave">
+            <div class="row mt-5">
+                <div class="col-md-4 mx-auto">
+                    <div class="card">
+                        <div class="card-header text-center">
+                            DETALLE
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-group-flush">
+                                <li class="list-group-item"><b>Nombre: </b>{{nave.nombre}}</li>
+                                <li class="list-group-item"><b>País: </b>{{nave.pais}}</li>
+                                <li class="list-group-item"><b>Tipo Nave: </b>{{nave.tipoNave}}</li>
+                                <li class="list-group-item"><b> </b>----------------------------------------------</li>
+                                <li class="list-group-item"><b>Toneladas de Empuje: </b>{{noTripulada.toneladasEmpuje}}</li>
+                                <li class="list-group-item"><b>Velocidad: </b>{{noTripulada.velocidad}}</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer">
+                            <button class="button.btn.btn-outline-primary w-100" routerLink="/">
+                                <i class="fas fa-arrow-alt-circle-left"></i> Atras
+                            </button>
+                        </div>
+                    </div>
+                </div>            
+            </div>
+        </div>
+    </div>
+</div>

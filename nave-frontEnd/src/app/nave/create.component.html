@@ -1,0 +1,86 @@
+<app-menu></app-menu>
+<div class="container">
+  <div clas="row mt-5">
+    <div class="col-md-4 mx-auto">
+      <h4 class="text-center">Crear nave</h4>
+      <form (ngSubmit) = "onCreate()" novalidate #f="ngForm">
+        <div class="mb-3">
+          <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nave nombre" autocomplete="off"
+            required [(ngModel)]="nombre">
+        </div>
+        <div class="mb-3">
+          <input type="tex" class="form-control" id="pais" name="pais" placeholder="Nave pais"
+            autocomplete="off" required [(ngModel)]="pais">
+        </div>
+        <div class="mb-3">
+          <div class="mb-3">
+          </div>
+        </div>
+
+      <div class="mb-3">
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" id="dropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+            Seleccione el tipo de Nave
+          </font></font></button>
+          <ul class="dropdown-menu" style="">
+            <li><a class="dropdown-item" id="1" (click)="lanzaderaMostrar=!lanzaderaMostrar"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Lanzadera</font></font></a></li>
+            <li><a class="dropdown-item" id="2" (click)="tripuladaMostrar=!tripuladaMostrar"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Tripulada</font></font></a></li>
+            <li><a class="dropdown-item" id="3" (click)="noTripuladaMostrar=!noTripuladaMostrar"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">No Tripulada</font></font></a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <input type="tex" class="form-control" id="potencia" name="potencia" placeholder="Potencia"
+          autocomplete="off" required [(ngModel)]="potencia" *ngIf="lanzaderaMostrar">
+      </div>
+      <div class="mb-3">
+        <input type="tex" class="form-control" id="toneladasEmpuje" name="toneladasEmpuje" placeholder="Tonelada de Empuje"
+          autocomplete="off" required [(ngModel)]="toneladasEmpuje" *ngIf="lanzaderaMostrar">
+      </div>
+      <div class="mb-3">
+        <input type="tex" class="form-control" id="toneladasPeso" name="toneladasPeso" placeholder="Tonelada de Peso"
+          autocomplete="off" required [(ngModel)]="toneladasPeso" *ngIf="lanzaderaMostrar">
+      </div>
+      <div class="mb-3">
+        <input type="tex" class="form-control" id="altura" name="altura" placeholder="Altura"
+          autocomplete="off" required [(ngModel)]="altura" *ngIf="lanzaderaMostrar">
+      </div>
+      <div class="mb-3">
+        <input type="tex" class="form-control" id="capacidadToneladas" name="capacidadToneladas" placeholder="Capacidad de Toneladas"
+          autocomplete="off" required [(ngModel)]="capacidadToneladas" *ngIf="lanzaderaMostrar">
+      </div>
+
+      <div class="mb-3">
+        <input type="tex" class="form-control" id="toneladasPeso" name="toneladasPeso" placeholder="Tonelada de Peso"
+          autocomplete="off" required [(ngModel)]="toneladasPeso" *ngIf="tripuladaMostrar">
+      </div>
+      <div class="mb-3">
+        <input type="tex" class="form-control" id="distancia" name="distancia" placeholder="Distancia"
+          autocomplete="off" required [(ngModel)]="distancia" *ngIf="tripuladaMostrar">
+      </div>
+      <div class="mb-3">
+        <input type="tex" class="form-control" id="capacidadPersonas" name="capacidadPersonas" placeholder="Capacidad de personas"
+          autocomplete="off" required [(ngModel)]="capacidadPersonas" *ngIf="tripuladaMostrar">
+      </div>
+
+      <div class="mb-3">
+        <input type="tex" class="form-control" id="toneladasEmpuje" name="toneladasEmpuje" placeholder="Toneladas de Empuje"
+          autocomplete="off" required [(ngModel)]="toneladasEmpuje" *ngIf="noTripuladaMostrar">
+      </div>
+      <div class="mb-3">
+        <input type="tex" class="form-control" id="velocidad" name="velocidad" placeholder="Velocidad"
+          autocomplete="off" required [(ngModel)]="velocidad" *ngIf="noTripuladaMostrar">
+      </div>
+
+        <button class="btn btn-outline-success w-100 mb-3" id="crear" [disabled]="!f.valid">
+          <i class="fas fa-plus-circle"></i>Crear
+        </button>
+        <br>
+        <button class="btn btn-outline-primary w-100" routerLink="/">
+          <i class="fas fa-arrow-alt-circle-left"></i> Atras
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
